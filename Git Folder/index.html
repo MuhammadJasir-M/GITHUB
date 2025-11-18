@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Urban Beekeeping & Honey Culture | Transforming Cities</title>
+    <meta
+      name="description"
+      content="Urban Beekeeping & Honey Culture: Learn how sustainable rooftop hives, city gardens, and vibrant honey communities are changing urban life."
+    />
+    <meta
+      name="keywords"
+      content="urban beekeeping, city honey, sustainable, rooftop hive, eco-friendly, biodiversity, bee garden, local honey"
+    />
+    <meta property="og:title" content="Urban Beekeeping & Honey Culture" />
+    <meta
+      property="og:description"
+      content="Discover the inspiring story and vibrant impact of urban beekeeping and honey culture."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="Bee icon.png">
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(125deg, #fffbe6 40%, #ffe082 100%);
+        transition: background 0.8s;
+      }
+      main {
+        transition: all 0.5s cubic-bezier(0.31, 0.76, 0.47, 1.75);
+      }
+      img {
+        max-width: 100%;
+        border-radius: 12px;
+        display: block;
+        object-fit: cover;
+        transition: box-shadow 0.25s ease, transform 0.25s ease; /* faster transition */
+      }
+      img:hover {
+        box-shadow: 0 8px 40px rgba(110, 90, 2, 0.3);
+        transform: scale(1.05) rotate(-1deg);
+      }
+
+      a {
+        color: #006c26;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      a:hover,
+      a:focus {
+        color: #22782f;
+        outline: none;
+      }
+      .container {
+        width: 92%;
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 1.9rem 0;
+        transition: background 0.7s;
+      }
+      nav {
+        background: #fcf8e3;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 14px rgba(200, 160, 70, 0.13);
+        transition: background 0.6s;
+      }
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.95rem 1rem;
+      }
+      .nav-brand {
+        font-size: 1.7rem;
+        font-weight: bold;
+        color: #e0a800;
+        letter-spacing: 2px;
+        font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
+      }
+      .nav-links {
+        display: flex;
+        gap: 1.3rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* ✅ Smooth single-line underline for navbar */
+      .nav-links a {
+        position: relative;
+        display: inline-block;
+        padding: 0.6rem 1rem;
+        font-size: 1.13rem;
+        border-radius: 6px;
+        transition: background 0.26s, color 0.26s;
+        text-decoration: none !important;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 3px;
+        width: 0%;
+        height: 3px;
+        background-color: #d4a017;
+        transition: width 0.25s ease-in-out;
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      .nav-links a:hover,
+      .nav-links a:focus {
+        background: #fff8e1;
+        color: #ae841a;
+      }
+
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+      }
+      .hamburger div {
+        width: 26px;
+        height: 4px;
+        background: #e0a800;
+        margin: 4px 0;
+        border-radius: 4px;
+        transition: 0.5s;
+      }
+      #hero {
+        background: linear-gradient(120deg, #ffe082 65%, #fffde7 100%);
+        text-align: center;
+        padding: 4.2rem 1rem 3.3rem;
+        border-bottom: 3px solid #ffe082;
+        box-shadow: 0 2px 24px rgba(255, 220, 30, 0.065);
+        animation: fadeInDown 1s;
+      }
+      #hero h1 {
+        font-size: 2.7rem;
+        font-weight: 700;
+        margin-bottom: 0.7rem;
+        letter-spacing: 1px;
+        color: #333;
+        text-shadow: 0 2px 6px #fffbe1;
+        animation: fadeInUp 1.4s;
+      }
+      #hero p {
+        font-size: 1.32rem;
+        margin-bottom: 1.6rem;
+        color: #453c1e;
+        animation: fadeInUp 1.7s;
+      }
+      .btn {
+        display: inline-block;
+        padding: 0.82rem 1.55rem;
+        background: linear-gradient(90deg, #212529 80%, #7b5e16 100%);
+        color: #fff;
+        border-radius: 7px;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 1.15rem;
+        letter-spacing: 0.5px;
+        border: none;
+        transition: background 0.22s, transform 0.22s;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+      }
+      .btn:hover,
+      .btn:focus {
+        background: linear-gradient(90deg, #343a40 80%, #ae841a 100%);
+        transform: scale(1.05);
+        outline: none;
+      }
+      section h2 {
+        font-size: 2.05rem;
+        border-left: 7px solid #ffc107;
+        padding-left: 13px;
+        margin-bottom: 1rem;
+        color: #61440d;
+        font-family: "Montserrat", "Segoe UI Semibold", Arial, sans-serif;
+        letter-spacing: 0.1px;
+        background: linear-gradient(90deg, #fff8e1 70%, #ffe082 100%);
+        border-radius: 6px;
+        transition: background 0.4s;
+        box-shadow: 0 2px 9px rgba(210, 180, 70, 0.048);
+      }
+
+      #about {
+        scroll-margin-top: 80px;
+      }
+
+      #features {
+        scroll-margin-top: 80px;
+      }
+
+      #services {
+        scroll-margin-top: 80px;
+      }
+
+      #gallery {
+        scroll-margin-top: 80px;
+      }
+
+      #process {
+        scroll-margin-top: 80px;
+      }
+
+      #testimonials {
+        scroll-margin-top: 80px;
+      }
+
+      #map {
+        scroll-margin-top: 80px;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.1rem;
+        margin: 0;
+        transition: gap 0.4s;
+      }
+      .col {
+        flex: 1 1 calc(33.333% - 1rem);
+        background: #fffbe6;
+        border-radius: 12px;
+        padding: 1.1rem 1rem 1.05rem 1rem;
+        margin-bottom: 0.7rem;
+        box-shadow: 0 4px 18px rgba(220, 180, 70, 0.09);
+        min-width: 210px;
+        position: relative;
+        transition: transform 0.3s, box-shadow 0.3s, background 0.35s;
+      }
+      .col:hover {
+        box-shadow: 0 6px 32px rgba(200, 150, 30, 0.19);
+        transform: translateY(-4px) scale(1.02);
+        background: #fffde4;
+      }
+      blockquote {
+        background: #fcf5e5;
+        border-left: 9px solid #ffc107;
+        padding: 1.25rem;
+        font-style: italic;
+        max-width: 700px;
+        margin: 1rem 0 1.5rem 0;
+        color: #886424;
+        box-shadow: 0 2px 18px rgba(210, 150, 0, 0.06);
+        transition: background 0.4s;
+      }
+      footer {
+        background: #212529;
+        color: #e6e1d4;
+        text-align: center;
+        padding: 1.3rem;
+        margin-top: 2rem;
+        letter-spacing: 1px;
+        font-size: 1.1rem;
+        box-shadow: 0 -3px 12px rgba(100, 70, 30, 0.09);
+      }
+      iframe {
+        border-radius: 12px;
+        width: 100%;
+        height: 320px;
+        border: none;
+        box-shadow: 0 2px 13px rgba(210, 130, 30, 0.13);
+        transition: box-shadow 0.3s;
+      }
+      #gallery img {
+        height: 200px;
+        object-fit: cover;
+        width: 100%;
+        border: 5px solid #ffeead;
+        box-shadow: 0 2px 15px rgba(255, 190, 90, 0.09);
+        transition: border 0.25s, box-shadow 0.25s; /* faster */
+        background: #fffde7;
+      }
+      #gallery img:hover {
+        border-color: #ebbe4c;
+        box-shadow: 0 7px 36px rgba(200, 160, 70, 0.29);
+      }
+      #about img,
+      #features img,
+      #services img,
+      #process img {
+        max-width: 85%;
+        margin: 1.2rem auto 0.5rem auto;
+        box-shadow: 0 2px 18px rgba(70, 50, 0, 0.09);
+        border: 4px solid #ffe082;
+        background: #fffde7;
+        transition: border 0.25s, box-shadow 0.25s; /* faster */
+      }
+      #about img:active,
+      #features img:active,
+      #services img:active,
+      #process img:active {
+        border-color: #d4b200;
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-60px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .col {
+          flex: 1 1 calc(50% - 1rem);
+        }
+        #hero h1 {
+          font-size: 2.1rem;
+        }
+      }
+      @media (max-width: 600px) {
+        .col {
+          flex: 1 1 100%;
+          margin-bottom: 1rem;
+        }
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          padding-top: 0.5rem;
+          margin: 0;
+          background: #fcf5e5;
+        }
+        .nav-links.active {
+          display: flex;
+        }
+        .hamburger {
+          display: flex;
+        }
+        .nav-links li {
+          margin: 0 0 0.7rem 0;
+        }
+        #about img,
+        #features img,
+        #services img,
+        #process img {
+          max-width: 99%;
+        }
+      }
+
+      /* ✅ Faster + smooth hover transition for section images */
+      section img {
+        transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out !important;
+        will-change: transform;
+      }
+      section img:hover {
+        transform: scale(1.06) rotate(-1deg) !important;
+        box-shadow: 0 10px 35px rgba(120, 100, 5, 0.35) !important;
+        border-color: #e0a800 !important;
+        cursor: pointer;
+      }
+
+      #scrollUpBtn {
+        position: fixed;
+        right: 28px;
+        bottom: 28px;
+        width: 60px;
+        height: 60px;
+        background: #e0a800; /* Honey color outer circle */
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.5s cubic-bezier(0.13, 0.93, 0.47, 0.99);
+        z-index: 110;
+      }
+
+      #scrollUpBtn.show {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      #scrollUpBtn svg {
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <a class="nav-brand" href="#hero">Urban Beekeeping</a>
+        <div
+          class="hamburger"
+          id="hamburger"
+          tabindex="0"
+          role="button"
+          aria-label="Toggle menu"
+        >
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#map">Map</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <section id="hero">
+        <div class="container">
+          <h1>Urban Beekeeping & Honey Culture</h1>
+          <p>
+            Bringing bee magic to the metropolis! From bustling rooftops to
+            peaceful courtyards, see how urban beekeepers and gardeners foster
+            biodiversity and fresh honey production, nurturing greener,
+            healthier communities in every corner of the city.<br />
+            <span style="font-size: 1rem; color: #ae841a">
+              Cultivating pollinator habitats, educating eco-leaders, and
+              inspiring every neighbor to join the buzz.
+            </span>
+          </p>
+          <img
+            src="Beehive on a city rooftop landscape.jpg"
+            alt="Beehive on a city rooftop landscape"
+          /><br />
+          <a href="#about" class="btn">Learn More</a>
+        </div>
+      </section>
+
+      <section id="about" class="container">
+        <h2>About Urban Beekeeping</h2>
+        <p>
+          Urban beekeeping is the sustainable art and science of nurturing
+          honeybee colonies within vibrant city environments. Urban beekeepers
+          carefully establish hives on rooftops, balconies, community gardens,
+          and other green spaces to support pollinator health and assist urban
+          agriculture. This practice fosters the pollination of countless
+          plants, helping city gardens and parks flourish and produce fresh
+          fruits, vegetables, and flowers. Urban bees often enjoy access to more
+          diverse nectar and pollen sources than rural bees, contributing to
+          unique and flavorful honey varieties.
+        </p>
+        <p>
+          Beyond honey production, urban beekeeping serves as a valuable
+          environmental education tool, connecting communities to the natural
+          cycles of pollination and ecosystem balance. By reintroducing these
+          vital pollinators into dense urban areas, beekeepers help mitigate
+          biodiversity loss, improve air quality, and promote sustainable city
+          living that respects nature’s essential role.
+        </p>
+        <ul>
+          <li>
+            Enhances pollination services vital for urban food gardens and
+            native plant restoration
+          </li>
+          <li>
+            Strengthens community bonds through shared ecological stewardship
+            and honey harvest events
+          </li>
+          <li>
+            Supports ecological balance, helping counteract the decline of
+            honeybee populations worldwide
+          </li>
+          <li>
+            Led by passionate hobbyists, environmental organizations, and
+            municipal sustainability programs
+          </li>
+          <li>
+            Promotes ecosystem health by creating green corridors that benefit
+            diverse urban wildlife
+          </li>
+        </ul>
+        <img
+          src="Urban beekeeper inspecting a hive.jpg"
+          alt="Urban beekeeper inspecting a hive"
+        />
+        <div style="margin-top: 0.7rem; color: #aa851a; font-size: 1rem">
+          Did you know? A single, healthy urban hive can pollinate tens of
+          thousands of flowering plants each season, significantly boosting
+          local biodiversity and garden productivity.
+        </div>
+      </section>
+
+      <section id="features" class="container">
+         
+        <h2>Key Benefits & Features</h2>
+         
+        <p>
+              Urban beekeeping offers a variety of ecological, social, and
+          educational benefits that contribute to vibrant, sustainable cities.
+          These thriving urban apiaries not only help plants grow but also
+          reconnect people with essential natural processes.  
+        </p>
+         
+        <ul>
+             
+          <li>
+            <strong>Supports plant pollination:</strong> Urban bee colonies
+            significantly increase the productivity of home gardens, community
+            farms, and city parks by pollinating a wide range of vegetables,
+            fruits, and ornamental plants throughout the year. This natural
+            service helps maintain healthy urban ecosystems and supports food
+            security.
+          </li>
+             
+          <li>
+            <strong>Specialty local honey:</strong> Each neighborhood's unique
+            collection of flowers—from native wildflowers to carefully
+            cultivated garden plants—results in local honey with distinctive
+            flavors and aromas, celebrated by connoisseurs and food enthusiasts.
+          </li>
+             
+          <li>
+            <strong>Boosts city biodiversity:</strong> Beekeeping creates
+            habitats for native pollinators and attracts beneficial wildlife,
+            helping to restore ecological balance within cities. Enhancing
+            biodiversity also supports cleaner air and healthier soils.
+          </li>
+             
+          <li>
+            <strong>Public workshops & events:</strong> Comprehensive programs
+            educate adults and children about pollinator biology, sustainable
+            beekeeping methods, and how to create bee-friendly gardens. These
+            gatherings foster community participation and environmental
+            stewardship.
+          </li>
+             
+          <li>
+            <strong>STEM & youth leadership:</strong> Urban beekeeping projects
+            engage students through hands-on learning about biology, ecology,
+            and sustainability, inspiring the next generation of environmental
+            leaders and scientists.
+          </li>
+             
+          <li>
+            <strong>Citizen science:</strong> Residents actively participate in
+            tracking pollinator populations, monitoring hive health, and
+            contributing to urban biodiversity research, helping to inform local
+            conservation strategies and environmental policy.
+          </li>
+           
+        </ul>
+         
+        <img
+          src="Bee pollinating colorful city flowers.jpg"
+          alt="Bee pollinating city flowers"
+        />
+         
+        <p style="margin-top: 1rem; font-size: 1rem; color: #597529">
+              By fostering life, color, and discovery, urban beekeeping empowers
+          cities to transform into thriving green spaces where people and nature
+          coexist harmoniously.  
+        </p>
+      </section>
+
+      <section id="services" class="container">
+        <h2>Services & Hive Types</h2>
+        <div class="row">
+          <div class="col">
+            <h3>Guided Hive Tours</h3>
+            <p>
+              Experience the fascinating world of a working urban apiary
+              firsthand. Visitors can meet the bees in their natural hive
+              environment, explore detailed hive frames, and observe the
+              intricate process of honey creation up close. Our expert guides
+              offer weekly tours tailored for school groups, families, and urban
+              nature enthusiasts, providing hands-on learning and environmental
+              awareness.
+            </p>
+            <p>
+              Tours include bee biology basics, hive safety protocols, and
+              demonstrations of sustainable beekeeping techniques that protect
+              and nurture pollinators in busy city spaces.
+            </p>
+          </div>
+          <div class="col">
+            <h3>Community Honey Sharing</h3>
+            <p>
+              Join seasonal honey harvest celebrations that bring the community
+              together to taste and enjoy diverse local honey varieties.
+              Participate in honey jar swaps and share recipes that celebrate
+              the distinct flavors produced by urban flowers. These events
+              foster strong neighborhood connections and raise awareness about
+              local sustainability initiatives.
+            </p>
+            <p>
+              We also offer honey tasting workshops and educational seminars on
+              the importance of pollinators to global food security and
+              ecological health.
+            </p>
+          </div>
+          <div class="col">
+            <h3>Pollinator Garden Creation</h3>
+            <p>
+              Collaborate with our pollination experts to design and establish
+              vibrant pollinator sanctuaries in urban spaces. Whether it’s a
+              rooftop garden, balcony planters, or city parks, we provide
+              guidance on selecting native plants, herbs, and flowers that
+              maximize nectar and pollen availability throughout the year.
+            </p>
+            <p>
+              Our support includes site analysis, planting plans, and
+              maintenance advice to ensure your garden thrives and attracts
+              diverse pollinator species, contributing to the overall health of
+              the urban ecosystem.
+            </p>
+          </div>
+        </div>
+        <img src="urban hive types.png" alt="Urban hive types" />
+        <div style="margin-top: 0.5rem; font-size: 0.97rem; color: #725e0e">
+          Choose from rooftop hives, balcony micro-hives, or ground-level super
+          hives tailored specifically for the unique demands of city
+          environments.
+        </div>
+      </section>
+
+      <section id="gallery" class="container">
+        <h2>Gallery</h2>
+        <div class="row">
+          <div class="col">
+            <img src="urban bee hive.jpg" alt="Rooftop hive" />
+          </div>
+          <div class="col">
+            <img src="honeycomb.jpg" alt="Honeycomb closeup" />
+          </div>
+          <div class="col">
+            <img src="group beehive.jpg" alt="Group beekeeping" />
+          </div>
+        </div>
+        <p style="text-align: center; font-size: 1.04rem; margin-top: 1.2rem">
+          A glimpse into real urban hives, friendly bees, honey harvests, and
+          vibrant gardens that make our city bloom.
+        </p>
+      </section>
+
+      <section id="process" class="container">
+        <h2>How Urban Beekeeping Works</h2>
+        <p>
+          Urban beekeeping is a thoughtful and sustainable practice that
+          requires planning, care, and community support. Each step promotes the
+          health of the bees, the quality of the honey, and the ecological
+          benefits for the city.
+        </p>
+        <ol>
+          <li>
+            <strong>Site Selection:</strong> Identifying the ideal location is
+            crucial for hive success. The site should receive ample sunlight
+            throughout the day, be sheltered from harsh winds and heavy rain,
+            and be close to abundant flowering gardens or green spaces rich in
+            nectar and pollen sources. Safety for both bees and people is
+            paramount.
+          </li>
+          <li>
+            <strong>Hive Installation:</strong> Install sturdy, well-ventilated
+            hive boxes and frames designed for urban settings. Choosing gentle
+            and adaptable bee breeds that thrive in city environments helps
+            ensure colony resilience and minimizes disturbances to neighbors.
+          </li>
+          <li>
+            <strong>Bee Health Checks:</strong> Regular monitoring is essential
+            to maintain hive health. Beekeepers assess the queen’s productivity,
+            brood patterns, food storage levels, and signs of pests or diseases.
+            Using organic and eco-friendly treatment methods maintains a safe
+            environment for bees and the surrounding ecosystem.
+          </li>
+          <li>
+            <strong>Honey Harvest & Filtering:</strong> When honey reaches
+            maturity, frames are carefully removed to minimize stress on the
+            colony. The honey is extracted, filtered for purity, and stored in
+            eco-conscious containers. This sustainable harvesting ensures the
+            hive's longevity and supports continuous honey production.
+          </li>
+          <li>
+            <strong>Neighborhood Events:</strong> Community engagement is vital.
+            Annual events such as a “Bee Festival” bring people together to
+            celebrate honey harvests, participate in craft workshops, and attend
+            ecological education talks. These gatherings foster a shared
+            appreciation for nature’s role in urban life.
+          </li>
+        </ol>
+        <img
+          src="A beekeeper harvesting honey from a rooftop hive.jpg"
+          alt="Honey extraction process"
+          style="
+            max-width: 1720px;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block;
+          "
+        />
+        <div style="margin-top: 0.7rem; color: #7d5d1f; font-size: 1rem">
+          Urban beekeeping thrives when people collaborate with nature, creating
+          harmonious ecosystems that benefit both pollinators and communities.
+        </div>
+      </section>
+
+      <section id="testimonials" class="container">
+        <h2>Community Voices</h2>
+        <blockquote>
+          “Adding a hive atop our apartment revibrated our entire courtyard—we
+          now enjoy tomatoes, fresh flowers, and local honey every season!”<br /><br />
+          <span style="font-size: 0.95rem; color: #987a15"
+            >– Priya, Urban Gardener</span
+          >
+        </blockquote>
+        <blockquote>
+          “City beekeeping inspired my science club to design pollinator
+          pathways and track honey yields. Bees make learning sweet!”<br /><br />
+          <span style="font-size: 0.95rem; color: #987a15"
+            >– Aarav, High School Student</span
+          >
+        </blockquote>
+        <blockquote>
+          “Harvesting honey with neighbors built lasting friendships and pride
+          in our city's green future.”<br /><br />
+          <span style="font-size: 0.95rem; color: #987a15"
+            >– Anita, Community Volunteer</span
+          >
+        </blockquote>
+        <blockquote>
+          "Beekeeping has become a wonderful community tradition in our
+          neighborhood; it's amazing to watch children and adults caring for
+          bees and learning about nature together."<br /><br />
+          <span style="font-size: 0.95rem; color: #987a15"
+            >– Khalid, Community Organizer</span
+          >
+        </blockquote>
+        <blockquote>
+          "Our rooftop hive has transformed into a buzzing classroom. The honey
+          harvest parties are now a must-attend event fostering excitement and
+          environmental awareness."<br /><br />
+          <span style="font-size: 0.95rem; color: #987a15"
+            >– Sonia, Teacher and Environmental Advocate</span
+          >
+        </blockquote>
+        <blockquote>
+          "Urban beekeeping connected me with my city in a way I never imagined.
+          These bees remind us of the natural rhythms even in bustling urban
+          settings."<br /><br />
+          <span style="font-size: 0.95rem; color: #987a15"
+            >– Jae, Local Resident and Artist</span
+          >
+        </blockquote>
+      </section>
+
+      <section id="map" class="container">
+        <h2>Find Us</h2>
+        <p>
+          Drop by our flagship roof apiary or local bee gardens every Saturday
+          for free tours and honey tasting.<br />
+          <span style="color: #914919">Contact: info@urbanhoneycity.org</span>
+        </p>
+        <iframe
+          src="https://www.openstreetmap.org/export/embed.html?bbox=77.5946%2C12.9716%2C77.6116%2C12.9816&layer=mapnik"
+          aria-label="Map showing urban beekeeping location"
+          loading="lazy"
+        ></iframe>
+      </section>
+    </main>
+
+    <footer>
+      &copy; 2025 Urban Beekeeping & Honey Culture.<br />
+      Designed for Hackathon | SEO-optimized | Beautiful transitions & cards |
+      Mobile responsive.
+    </footer>
+
+    <button id="scrollUpBtn" aria-label="Scroll to top">
+      <svg viewBox="0 0 36 36" width="40" height="40">
+        <circle cx="18" cy="18" r="14" fill="#fff" />
+        <path
+          d="M18 24V14"
+          stroke="#222"
+          stroke-width="3.4"
+          stroke-linecap="round"
+        />
+        <path
+          d="M13 18L18 14L23 18"
+          stroke="#222"
+          stroke-width="3.4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("nav-links");
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+      hamburger.addEventListener("keypress", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          navLinks.classList.toggle("active");
+        }
+      });
+      // Smooth fade-in for each .container section on scroll (accessibility-safe)
+      document.querySelectorAll("section.container").forEach((sec) => {
+        sec.style.opacity = "0";
+        sec.style.transform = "translateY(32px)";
+        window.addEventListener("scroll", () => {
+          const box = sec.getBoundingClientRect();
+          if (box.top < window.innerHeight - 80) {
+            sec.style.transition = "opacity 0.7s, transform 0.7s";
+            sec.style.opacity = "1";
+            sec.style.transform = "none";
+          }
+        });
+      });
+
+      const scrollUpBtn = document.getElementById("scrollUpBtn");
+
+      // Show/hide on scroll
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 250) {
+          scrollUpBtn.classList.add("show");
+        } else {
+          scrollUpBtn.classList.remove("show");
+        }
+      });
+
+      // Smooth scroll & reset focus on click
+      scrollUpBtn.addEventListener("click", () => {
+        scrollUpBtn.blur();
+        document.getElementById("hero").scrollIntoView({ behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>
